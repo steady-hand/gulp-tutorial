@@ -1,0 +1,13 @@
+div {
+  appearance: none; }
+
+.title {
+  color: blueviolet; }
+
+li {
+  color: tomato;
+  list-style: none; }
+
+.title-2 {
+  font-size: 50px;
+  color: khaki; }
