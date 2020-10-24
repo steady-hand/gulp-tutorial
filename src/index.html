@@ -1,42 +1,25 @@
-<!DOCTYPE html>
-<html lang="ru">
+{% extends "templates/default.html" %}
+{% set title = "Главная страница" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
+{% block content %}
+{% include "includes/header.html" %}
 
-<body>
-    <div class="container">
-        <h1 class="title">Ура, работает!</h1>
-        <nav class="nav">
-            <ul class="list">
-                <a href="#">
-                    <li class="list-item">
-                        Главная
-                    </li>
-                </a>
-                <a href="#">
-                    <li class="list-item">
-                        Меню
-                    </li>
-                </a>
-                <a href="#">
-                    <li class="list-item">
-                        Магазин
-                    </li>
-                </a>
-                <a href="#">
-                    <li class="list-item">
-                        Отзывы
-                    </li>
-                </a>
-            </ul>
-        </nav>
-    </div>
+<main class="main">
+  <div class="container">
+    <h1 class="title">
+      {{ title }}
+    </h1>
+    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+      Earum reprehenderit sapiente deserunt quidem dolor excepturi consequuntur in ab atque? Iure laborum a deleniti
+      obcaecati.
+    </p>
+    <p class="paragraph">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, voluptates.<br>
+      Ipsam optio pariatur dolor repellat dignissimos atque voluptates, tempore sunt libero voluptatum distinctio<br>
+      odit fugit? Porro voluptates hic explicabo eligendi maiores nihil quod, asperiores unde. Odit in officia omnis.
+    </p>
+  </div>
+</main>
 
-</body>
-
-</html>
+{% include "includes/footer.html" %}
+{% endblock %}

@@ -1,42 +1,29 @@
-<!DOCTYPE html>
-<html lang="ru">
+{% extends "templates/default.html" %}
+{% set title = "Статья несостоявшегося поэта" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document-2</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
+{% block content %}
+{% include "includes/header.html" %}
 
-<body>
-    <div class="container">
-        <h1 class="title-2">Вторая страница!</h1>
-        <nav class="nav">
-            <ul class="list">
-                <a href="#">
-                    <li class="list-item">
-                        Главная
-                    </li>
-                </a>
-                <a href="#">
-                    <li class="list-item">
-                        Меню
-                    </li>
-                </a>
-                <a href="#">
-                    <li class="list-item">
-                        Магазин
-                    </li>
-                </a>
-                <a href="#">
-                    <li class="list-item">
-                        Отзывы
-                    </li>
-                </a>
-            </ul>
-        </nav>
-    </div>
+<main class="main">
+  <div class="container">
+    <h1 class="title">
+      {{ title }}
+    </h1>
+    <p class="paragraph">
+      Можно и про поля,<br>
+      Да про тополя - <br>
+      Это дело нехитрое,<br>
+      Вуаля!<br>
+      Я бы точно смог,<br>
+      Только точит тля,<br>
+      Заставляя меня<br>
+      Начинать с нуля...
+    </p>
+    <p class="paragraph">
+      Ля ля ля
+    </p>
+  </div>
+</main>
 
-</body>
-
-</html>
+{% include "includes/footer.html" %}
+{% endblock %}

@@ -1,13 +1,39 @@
-div {
-  appearance: none; }
+body {
+  margin: 0 auto;
+  max-width: 1400px; }
 
 .title {
-  color: blueviolet; }
-
-li {
-  color: tomato;
-  list-style: none; }
-
-.title-2 {
   font-size: 50px;
-  color: khaki; }
+  color: tomato; }
+
+.paragraph {
+  font-style: italic; }
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between; }
+
+.nav__list {
+  margin: 0 -12px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0; }
+
+.nav__item {
+  padding: 4px 12px; }
+
+.nav__link {
+  text-decoration: none; }
+
+.footer {
+  margin-top: 50px; }
+  .footer__list {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto; }
+  .footer__link {
+    text-decoration: none; }

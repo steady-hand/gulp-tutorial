@@ -1,0 +1,14 @@
+.footer {
+  margin-top: 50px;
+  &__list {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+  }
+  &__link {
+    text-decoration: none;
+  }
+}
