@@ -9,3 +9,45 @@ body {
 .paragraph {
   font-style: italic;
 }
+.box {
+  margin: 0 auto;
+  display: grid;
+  column-gap: 15px;
+  grid-template-columns: 200px 200px 200px 200px;
+  width: 845px;
+  font-family: Roboto;
+  padding: 40px 55px 220px 55px;
+
+  &__img {
+    display: block;
+    margin: 10px auto 7px auto;
+  }
+
+  &__card {
+    background-color: #EEEEEE;
+  }
+
+  &__title {
+    margin: 0 auto 17px 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000000;
+  }
+
+  &__paragraph {
+    margin: 0 auto 17px 10px;
+    font-size: 12px;
+    color: #000000;
+  }
+
+  &__button {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    background: #C4C4C4;
+    margin: 0 10px 10px 10px;
+    font-size: 10px;
+    color: #000000;
+  }
+}

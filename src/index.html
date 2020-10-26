@@ -1,5 +1,6 @@
 {% extends "templates/default.html" %}
 {% set title = "Главная страница" %}
+{% from "includes/macros.html" import cards %}
 
 {% block content %}
 
@@ -17,6 +18,20 @@
       Ipsam optio pariatur dolor repellat dignissimos atque voluptates, tempore sunt libero voluptatum distinctio<br>
       odit fugit? Porro voluptates hic explicabo eligendi maiores nihil quod, asperiores unde. Odit in officia omnis.
     </p>
+  </div>
+  <div class="box">
+    {% for i in range(0, 4) %}
+    {% if i === 0 %}
+    {{ cards('Первая карточка', 'Достаточно краткое описание для первой карточки',
+    'https://picsum.photos/id/1073/180/120') }}
+    {% elif i === 1 %}
+    {{ cards('Вторая карточка', 'Достаточно краткое описание для второй карточки', 'https://picsum.photos/id/1/180/120') }}
+    {% elif i === 2 %}
+    {{ cards('Третья карточка', 'Достаточно краткое описание для третьей карточки', 'https://picsum.photos/id/1010/180/120') }}
+    {% elif i === 3 %}
+    {{ cards('Четвёртая карточка', 'Достаточно краткое описание для четвёртой карточки', 'https://picsum.photos/id/1058/180/120') }}
+    {% endif %}
+    {% endfor %}
   </div>
 </main>
 
