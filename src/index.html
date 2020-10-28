@@ -1,6 +1,6 @@
 {% extends "templates/default.html" %}
 {% set title = "Главная страница" %}
-{% from "includes/macros.html" import cards %}
+
 {% set items = [
   { src:'https://picsum.photos/id/1073/180/120', title:'Первая карточка', 
   description:'Достаточно краткое описание для <b>первой</b> карточки'},
@@ -32,7 +32,12 @@
   </div>
   <div class="box">
     {% for item in items %}
-    {{ cards(item.title, item.description, item.src) }}
+    <div class="box__card">
+      <img src="{{ item.src }}" alt="" class="box__img">
+      <h2 class="box__title">{{ item.title }}</h2>
+      <p class="box__paragraph">{{ item.description|safe }}</p>
+      <a href="" class="box__button">Подробнее</a>
+    </div>
     {% endfor %}
   </div>
 </main>
