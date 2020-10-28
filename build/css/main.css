@@ -13,24 +13,29 @@ body {
   margin: 0 auto;
   display: grid;
   column-gap: 15px;
-  grid-template-columns: 200px 200px 200px 200px;
-  width: 845px;
+  grid-template-columns: 25% 25% 25% 25%;
+  width: 955px;
   font-family: Roboto;
-  padding: 40px 55px 220px 55px; }
+  padding: 40px 55px 220px 55px;
+  box-sizing: border-box; }
   .box__img {
     display: block;
-    margin: 10px auto 7px auto;
-    width: 180px;
-    height: 120px; }
+    margin: 0 auto 7px auto;
+    width: 100%; }
   .box__card {
-    background-color: #EEEEEE; }
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px; }
   .box__title {
-    margin: 0 auto 17px 10px;
+    margin: 0 auto 17px 0;
     font-weight: bold;
     font-size: 16px;
     color: #000000; }
   .box__paragraph {
-    margin: 0 auto 17px 10px;
+    margin: 0 auto 17px auto;
     font-size: 12px;
     color: #000000; }
   .box__button {
@@ -40,7 +45,6 @@ body {
     text-align: center;
     padding: 10px 0;
     background: #C4C4C4;
-    margin: 0 10px 10px 10px;
     font-size: 10px;
     color: #000000; }
 

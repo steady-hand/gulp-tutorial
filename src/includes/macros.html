@@ -1,8 +1,10 @@
 {% macro cards(title, description, src) %}
 <div class="box__card">
-  <img src="{{ src }}" alt="" class="box__img">
-  <h2 class="box__title">{{ title }}</h2>
-  <p class="box__paragraph">{{ description|safe }}</p>
+  <div class="box__card-wrap">
+    <img src="{{ src }}" alt="" class="box__img">
+    <h2 class="box__title">{{ title }}</h2>
+    <p class="box__paragraph">{{ description|safe }}</p>
+  </div>
   <a href="" class="box__button">Подробнее</a>
 </div>
 {% endmacro %}
