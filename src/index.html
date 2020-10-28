@@ -1,6 +1,17 @@
 {% extends "templates/default.html" %}
 {% set title = "Главная страница" %}
 {% from "includes/macros.html" import cards %}
+{% set items = [
+  { src:'https://picsum.photos/id/1073/180/120', title:'Первая карточка', 
+  description:'Достаточно краткое описание для <b>первой</b> карточки'},
+  { src:'https://picsum.photos/id/1/180/120', title:"Вторая карточка", 
+  description:'Достаточно краткое описание для <b>второй</b> карточки'},
+  { src:'https://picsum.photos/id/1010/180/120', title: "Третья карточка", 
+  description:'Достаточно краткое описание для <b>третьей</b> карточки'},
+  { src:'https://picsum.photos/id/1058/180/120', title:"Четвёртая карточка", 
+  description:'Достаточно краткое описание для <b>четвёртой</b> карточки'}
+  ] %}
+
 
 {% block content %}
 
@@ -20,17 +31,8 @@
     </p>
   </div>
   <div class="box">
-    {% for i in range(0, 4) %}
-    {% if i === 0 %}
-    {{ cards('Первая карточка', 'Достаточно краткое описание для <b>первой</b> карточки',
-    'https://picsum.photos/id/1073/180/120') }}
-    {% elif i === 1 %}
-    {{ cards('Вторая карточка', 'Достаточно краткое описание для <b>второй</b> карточки', 'https://picsum.photos/id/1/180/120') }}
-    {% elif i === 2 %}
-    {{ cards('Третья карточка', 'Достаточно краткое описание для <b>третьей</b> карточки', 'https://picsum.photos/id/1010/180/120') }}
-    {% elif i === 3 %}
-    {{ cards('Четвёртая карточка', 'Достаточно краткое описание для <b>четвёртой</b> карточки', 'https://picsum.photos/id/1058/180/120') }}
-    {% endif %}
+    {% for item in items %}
+    {{ cards(item.title, item.description, item.src) }}
     {% endfor %}
   </div>
 </main>

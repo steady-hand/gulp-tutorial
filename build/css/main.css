@@ -33,6 +33,7 @@ body {
     color: #000000; }
   .box__button {
     text-decoration: none;
+    text-transform: uppercase;
     display: block;
     text-align: center;
     padding: 10px 0;
