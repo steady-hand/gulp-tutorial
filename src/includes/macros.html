@@ -3,8 +3,8 @@
   <div class="box__card-wrap">
     <div class="box__img-wrap">
       <picture>
-        <source type="image/webp" srcset="{{ src }}">
-        <img src="{{ src }}" alt="" class="box__img">
+        <source type="image/webp" srcset="img/{{ src }}.webp">
+        <img src="img/{{ src }}.jpg" alt="" class="box__img">
       </picture>
     </div>
     <h2 class="box__title">{{ title }}</h2>
@@ -12,4 +12,10 @@
   </div>
   <a href="" class="box__button">Подробнее</a>
 </div>
+{% endmacro %}
+{% macro image(src) %}
+<picture>
+  <source type="image/webp" srcset="img/{{ src }}.webp">
+  <img src="img/{{ src }}.jpg" alt="" class="pictures__img">
+</picture>
 {% endmacro %}

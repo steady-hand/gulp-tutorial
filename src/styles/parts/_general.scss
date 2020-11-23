@@ -16,7 +16,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   width: 955px;
   font-family: Roboto;
-  padding: 40px 55px 220px 55px;
+  padding: 40px 55px 55px 55px;
   box-sizing: border-box;
 
   &__img {
@@ -69,5 +69,20 @@ body {
     background: #C4C4C4;
     font-size: 10px;
     color: #000000;
+  }
+}
+.pictures {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 955px;
+  height: 300px;
+
+
+  &__img {
+    width: 200px;
+    height: 150px;
+    object-position: 50% 50%;
+    object-fit: cover;
   }
 }
