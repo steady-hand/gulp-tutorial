@@ -1,9 +1,9 @@
-{% macro cards(title, description, src, srcset) %}
+{% macro cards(title, description, src) %}
 <div class="box__card">
   <div class="box__card-wrap">
     <div class="box__img-wrap">
       <picture>
-        <source type="image/webp" srcset="{{ srcset }}">
+        <source type="image/webp" srcset="{{ src }}">
         <img src="{{ src }}" alt="" class="box__img">
       </picture>
     </div>

@@ -1,0 +1,40 @@
+{% extends "templates/default.html" %}
+{% set title = "Главная страница" %}
+{% from "includes/macros.html" import cards %}
+{% set items = [
+  { src:'img/card-one.jpg', title:'Заголовок для первой карточки. Очень длинный заголовок', 
+  description:'Достаточно краткое описание для <b>первой</b> карточки'},
+  { src:'img/mountain.jpg', title:"Вторая карточка", 
+  description:'Достаточно краткое описание для <b>второй</b> карточки'},
+  { src:'img/card.jpg', title: "Третья карточка", 
+  description:'Достаточно краткое описание для <b>третьей</b> карточки'},
+  { src:'img/walruses.jpg', title:"Четвёртая карточка", 
+  description:'Достаточно краткое описание для <b>четвёртой</b> карточки'}
+  ] %}
+
+
+{% block content %}
+
+<main class="main">
+  <div class="container">
+    <h1 class="title">
+      {{ title }}
+    </h1>
+    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+      Earum reprehenderit sapiente deserunt quidem dolor excepturi consequuntur in ab atque? Iure laborum a deleniti
+      obcaecati.
+    </p>
+    <p class="paragraph">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, voluptates.<br>
+      Ipsam optio pariatur dolor repellat dignissimos atque voluptates, tempore sunt libero voluptatum distinctio<br>
+      odit fugit? Porro voluptates hic explicabo eligendi maiores nihil quod, asperiores unde. Odit in officia omnis.
+    </p>
+  </div>
+  <div class="box">
+    {% for item in items %}
+    {{ cards(item.title, item.description, item.src) }}
+    {% endfor %}
+  </div>
+</main>
+
+{% endblock %}
