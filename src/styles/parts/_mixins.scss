@@ -1,0 +1,17 @@
+@mixin media-down($point) {
+  @if $point == sm {
+    @media (max-width: $screen-sm - 1) { @content; }
+  }
+}
+
+@mixin media-only($point) {
+  @if $point == md {
+    @media (min-width: $screen-sm) and (max-width: $screen-md - 1) { @content; }
+  }
+}
+
+@mixin media-up($point) {
+  @if $point == lg {
+    @media (min-width: $screen-md) { @content; }
+  }
+}

@@ -86,3 +86,122 @@ body {
     object-fit: cover;
   }
 }
+
+.box-container {
+  @include media-down(sm) {
+    width: auto;
+    margin: 20px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    &__1 {
+      width: auto;
+      min-height: 60px;
+      background: #C4C4C4;
+    }
+
+    &__2 {
+      width: auto;
+      min-height: 360px;
+      background: #FF9C9C;
+    }
+
+    &__3 {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 20px;
+    }
+
+    &__3-1 {
+      width: 50%;
+      min-height: 60px;
+      background: #92B9D4;
+    }
+
+    &__3-2 {
+      width: 50%;
+      min-height: 60px;
+      background: #9BC79D;
+    }
+  }
+
+  @include media-only(md) {
+    width: auto;
+    margin: 20px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    &__1 {
+      width: auto;
+      min-height: 60px;
+      background: red;
+    }
+
+    &__2 {
+      width: auto;
+      min-height: 360px;
+      background: red;
+    }
+
+    &__3 {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 20px;
+    }
+
+    &__3-1 {
+      width: 50%;
+      min-height: 60px;
+      background: red;
+    }
+
+    &__3-2 {
+      width: 50%;
+      min-height: 60px;
+      background: red;
+    }
+  }
+
+  @include media-up(lg) {
+    width: auto;
+    margin: 20px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    &__1 {
+      width: auto;
+      min-height: 60px;
+      background: yellow;
+    }
+
+    &__2 {
+      width: auto;
+      min-height: 360px;
+      background: yellow;
+    }
+
+    &__3 {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 20px;
+    }
+
+    &__3-1 {
+      width: 50%;
+      min-height: 60px;
+      background: yellow;
+    }
+
+    &__3-2 {
+      width: 50%;
+      min-height: 60px;
+      background: yellow;
+    }
+  }
+}
